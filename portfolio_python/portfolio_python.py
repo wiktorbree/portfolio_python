@@ -1,5 +1,3 @@
-"""Welcome to Reflex! This file outlines the steps to create a basic app."""
-
 import reflex as rx
 
 from rxconfig import config
@@ -87,6 +85,9 @@ class Main:
                 "I create games and apps in Python with a focus on user experience and minimalistic design",
                 size="4",
             ),
+            rx.button(
+                "Get in touch"
+            ),
             spacing="5",
             justify="center",
             min_height="85vh",
@@ -105,6 +106,10 @@ class Main:
     def build(self):
         self.box.children = [self.compile_desktop_component(), self.compile_mobile_component()]
         return self.box
+
+class Projects:
+    def __init__(self):
+        pass
 
 @rx.page(route="/")
 def landing() -> rx.Component:
