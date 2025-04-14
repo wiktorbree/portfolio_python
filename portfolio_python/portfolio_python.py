@@ -1,4 +1,6 @@
 import reflex as rx
+from pygments.styles.dracula import background
+from reflex import toggle_color_mode
 
 from rxconfig import config
 
@@ -10,7 +12,7 @@ class State(rx.State):
 
 def navbar_link(text: str, url: str) -> rx.Component:
     return rx.link(
-        rx.text(text, size="4", weight="medium", href=url),
+        rx.text(text, size="4", weight="medium", href=url, ),
     )
 
 def navbar() -> rx.Component:
@@ -33,16 +35,18 @@ def navbar() -> rx.Component:
                     rx.color_mode.button(),
                     justify="end",
                     spacing="5",
+                    align_items="center",
                 ),
                 justify="between",
                 align_items="center",
             ),
+            padding="1rem 15rem 1rem 15rem",
         ),
         rx.mobile_and_tablet(
             rx.hstack(
                 rx.hstack(
                     rx.heading(
-                        "Braker Wiktor",
+                        "Bramer Wiktor",
                         size="6",
                         weight="bold",
                     ),
@@ -58,14 +62,19 @@ def navbar() -> rx.Component:
                         rx.menu.item("Skills"),
                         rx.menu.item("Contact"),
                         rx.menu.item(rx.color_mode.button()),
+                        background_color=rx.color_mode_cond(
+                            light="#f1f1f1",
+                            dark="#111827",
+                        )
                     ),
                     justify="end",
+                    align_items="center",
                 ),
                 justify="between",
                 align_items="center",
             ),
+            padding="1rem 2rem 1rem 2rem",
         ),
-        padding="1rem",
         width="100%",
     )
 
@@ -74,19 +83,31 @@ class Main:
         self.box = rx.box(width="100%")
 
         self.name = rx.vstack(
-            rx.heading("Hi, I'm Wiktor!", size="9"),
+            rx.heading(
+                    "Hi, I'm ",
+                    rx.text.span("Wiktor", color="#2563eb"),
+                size="9",
+            ),
             rx.text(
                 "Computer Science Student",
-                color="grey",
+                color="#6b7280",
                 size="8",
                 weight="bold",
             ),
             rx.text(
                 "I create games and apps in Python with a focus on user experience and minimalistic design",
+                color="#6b7280",
                 size="4",
+                weight="medium",
             ),
             rx.button(
-                "Get in touch"
+                "Get in touch",
+                background_color="#2563eb",
+                size="4",
+                radius="large",
+                _hover={
+                    "background_color": "#2055c9"
+                },
             ),
             spacing="5",
             justify="center",
@@ -116,10 +137,16 @@ def landing() -> rx.Component:
 
     main: object = Main().build()
 
-    return rx.container(
+    return rx.box(
         navbar(),
-        main,
-
+        rx.divider(),
+        rx.container(
+            main,
+        ),
+        background_color=rx.color_mode_cond(
+            light="#ffffff",
+            dark="#111827",
+        )
     )
 
 
