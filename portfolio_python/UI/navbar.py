@@ -1,4 +1,7 @@
 import reflex as rx
+from pygments.styles.dracula import background
+from portfolio_python.UI.variables import background
+
 
 def navbar_link(text: str, url: str) -> rx.Component:
     return rx.link(
@@ -29,6 +32,8 @@ def navbar() -> rx.Component:
                 ),
                 justify="between",
                 align_items="center",
+                background_color=background(),
+                transition="0.5s ease",
             ),
             padding="1rem 15rem 1rem 15rem",
         ),
@@ -52,10 +57,7 @@ def navbar() -> rx.Component:
                         rx.menu.item("Skills"),
                         rx.menu.item("Contact"),
                         rx.menu.item(rx.color_mode.button()),
-                        background_color=rx.color_mode_cond(
-                            light="#f1f1f1",
-                            dark="#111827",
-                        )
+                        background_color=background(),
                     ),
                     justify="end",
                     align_items="center",
@@ -65,5 +67,9 @@ def navbar() -> rx.Component:
             ),
             padding="1rem 2rem 1rem 2rem",
         ),
+        rx.divider(),
         width="100%",
+        position="fixed",
+        background_color=background(),
+        transition="0.5s ease",
     )
