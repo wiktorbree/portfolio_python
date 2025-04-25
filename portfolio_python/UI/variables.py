@@ -26,3 +26,7 @@ def color_surface():
         light="#f3f4f6",
         dark="#1f2937",
     ),
+
+trans_time = "0.3s ease"
+
+letter_bold = "0.7px"
