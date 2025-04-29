@@ -1,6 +1,6 @@
 import reflex as rx
 from pygments.styles.dracula import background
-from portfolio_python.UI.variables import color_primary, color_text, color_text_light, color_surface, background, trans_time
+from portfolio_python.Components.variables import color_primary, color_text, color_text_light, color_surface, background, trans_time
 
 
 def navbar_link(text: str, url: str) -> rx.Component:
@@ -10,7 +10,7 @@ def navbar_link(text: str, url: str) -> rx.Component:
                 weight="medium",
                 href=url,
                 color=color_text(),
-                _hover={"color": color_primary(),
+                _hover={"color": color_primary,
                         "transition": "all 0.1s ease-in-out",},
         ),
         text_decoration="none",
@@ -27,6 +27,18 @@ def navbar() -> rx.Component:
                         font_weight="900",
                         letter_spacing="-1px",
                         color=color_text(),
+                        position="relative",
+                        background_image=f"linear-gradient(to right, {color_primary} 0%, {color_primary} 100%)",
+                        background_position="0% 100%",
+                        background_repeat="no-repeat",
+                        background_size="0% 2px",
+                        transition="background-size 0.3s ease-in-out, transform 0.3s ease-in-out",
+                        cursor="pointer",
+                        _hover={
+                            "background_size": "100% 2px",
+                            "transform": "translateY(-2px)",
+                        },
+                        on_click=lambda: rx.call_script("window.scrollTo({ top: 0, behavior: 'smooth' })"),
                     ),
                     align_items="center",
                 ),

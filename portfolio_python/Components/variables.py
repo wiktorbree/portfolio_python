@@ -1,7 +1,9 @@
 import reflex as rx
 
-def color_primary():
-    return "#2563eb"
+color_primary = "#2563eb"
+hover_primary = "#2055c9"
+trans_time = "0.3s ease"
+letter_bold = "0.7px"
 
 def color_text():
     return rx.color_mode_cond(
@@ -27,6 +29,15 @@ def color_surface():
         dark="#1f2937",
     ),
 
-trans_time = "0.3s ease"
+def btn_color_secondary():
+    return rx.color_mode_cond(
+        light="#d9dadb",
+        dark="#273445",
+    ),
 
-letter_bold = "0.7px"
+def btn_color_secondary_hover():
+    return rx.color_mode_cond(
+        light="#c5c7c9",
+        dark="#333f51",
+    ),
+
