@@ -282,7 +282,7 @@ def footer():
             width="100%",
             gap="4",
         ),
-        rx.container(rx.text("© 2025 Wiktor Bramer. All rights reserved. Made in Python using:", color=color_text()), size="4",padding_top="2rem"),
+        rx.container(rx.text("© 2025 Wiktor Bramer. All rights reserved.", color=color_text()), size="4",padding_top="2rem"),
 
         align="center",
         justify="center",
