@@ -40,4 +40,3 @@ def btn_color_secondary_hover():
         light="#c5c7c9",
         dark="#333f51",
     ),
-

@@ -3,16 +3,18 @@ from pygments.styles.dracula import background
 from portfolio_python.Components.variables import color_primary, color_text, color_text_light, color_surface, background, trans_time
 
 
-def navbar_link(text: str, url: str) -> rx.Component:
-    return rx.link(
+def navbar_link(text: str, id: str) -> rx.Component:
+    return rx.fragment(
         rx.text(text,
                 size="4",
                 weight="medium",
-                href=url,
                 color=color_text(),
+                cursor="pointer",
                 _hover={"color": color_primary,
                         "transition": "all 0.1s ease-in-out",},
+                on_click=rx.scroll_to(id),
         ),
+        on_click=rx.scroll_to(id),
         text_decoration="none",
     )
 
@@ -43,10 +45,10 @@ def navbar() -> rx.Component:
                     align_items="center",
                 ),
                 rx.hstack(
-                    navbar_link("Home", "/#"),
-                    navbar_link("Project", "/#"),
-                    navbar_link("Skills", "/#"),
-                    navbar_link("Contact", "/#"),
+                    navbar_link("Home", "main"),
+                    navbar_link("Project", "projects"),
+                    navbar_link("Skills", "skills"),
+                    navbar_link("Contact", "get-in-touch"),
                     rx.color_mode.button(color=color_text()),
                     justify="end",
                     spacing="5",
@@ -68,6 +70,18 @@ def navbar() -> rx.Component:
                         font_weight="900",
                         letter_spacing="-1px",
                         color=color_text(),
+                        position="relative",
+                        background_image=f"linear-gradient(to right, {color_primary} 0%, {color_primary} 100%)",
+                        background_position="0% 100%",
+                        background_repeat="no-repeat",
+                        background_size="0% 2px",
+                        transition="background-size 0.3s ease-in-out, transform 0.3s ease-in-out",
+                        cursor="pointer",
+                        _hover={
+                            "background_size": "100% 2px",
+                            "transform": "translateY(-2px)",
+                        },
+                        on_click=lambda: rx.call_script("window.scrollTo({ top: 0, behavior: 'smooth' })"),
                     ),
                     align_items="center",
                 ),
@@ -94,6 +108,8 @@ def navbar() -> rx.Component:
         rx.divider(),
         width="100%",
         position="fixed",
+        top="0",
+        z_index="1000",
         background_color=background(),
         transition=trans_time,
     )

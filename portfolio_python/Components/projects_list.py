@@ -187,7 +187,7 @@ def project_3():
             letter_spacing=letter_bold,
         ),
         rx.text(
-            f"Simple particle life simulation made in Python using Pygame library.",
+            f"Simple particle life simulation made in Python using PyGame.",
             padding="0 1.5rem 0 1.5rem",
             color=color_text_light(),
         ),
