@@ -1,5 +1,5 @@
 import reflex as rx
-from portfolio_python.Components.variables import color_primary, color_text, color_text_light, background, color_surface, trans_time, letter_bold, hover_primary, btn_color_secondary, btn_color_secondary_hover
+from portfolio_python.Components.variables import color_primary, color_text, color_text_light, background, color_surface, trans_time, letter_bold, hover_primary, btn_color_secondary
 
 
 def project_1():
@@ -21,7 +21,7 @@ def project_1():
             rx.badge(
                 rx.text(f"Python", font_size="0.90rem", ),
                 variant="solid",
-                color="#f9fafb",
+                color="#FFFCF2",
                 background_color=color_primary,
                 box_sizing="border-box",
                 border_radius="0.50rem",
@@ -33,7 +33,7 @@ def project_1():
             rx.badge(
                 rx.text(f"Minimalistic", font_size="0.90rem", ),
                 variant="solid",
-                color="#f9fafb",
+                color="#FFFCF2",
                 background_color=color_primary,
                 box_sizing="border-box",
                 border_radius="0.50rem",
@@ -45,7 +45,7 @@ def project_1():
             rx.badge(
                 rx.text(f"Reflex", font_size="0.90rem", ),
                 variant="solid",
-                color="#f9fafb",
+                color="#FFFCF2",
                 background_color=color_primary,
                 box_sizing="border-box",
                 border_radius="0.50rem",
@@ -57,7 +57,7 @@ def project_1():
         ),
         rx.hstack(
             rx.button(
-                rx.text("View Project", size="4", color="#f9fafb", weight="bold"),
+                rx.text("View Project", size="4", color="#FFFCF2", weight="bold"),
                 background_color=color_primary,
                 border_radius="1rem",
                 box_sizing="border-box",
@@ -109,7 +109,7 @@ def project_2():
             rx.badge(
                 rx.text(f"Python", font_size="0.90rem", ),
                 variant="solid",
-                color="#f9fafb",
+                color="#FFFCF2",
                 background_color=color_primary,
                 box_sizing="border-box",
                 border_radius="0.50rem",
@@ -121,7 +121,7 @@ def project_2():
             rx.badge(
                 rx.text(f"Pixel Art", font_size="0.90rem", ),
                 variant="solid",
-                color="#f9fafb",
+                color="#FFFCF2",
                 background_color=color_primary,
                 box_sizing="border-box",
                 border_radius="0.50rem",
@@ -133,7 +133,7 @@ def project_2():
             rx.badge(
                 rx.text(f"Game Dev", font_size="0.90rem", ),
                 variant="solid",
-                color="#f9fafb",
+                color="#FFFCF2",
                 background_color=color_primary,
                 box_sizing="border-box",
                 border_radius="0.50rem",
@@ -145,7 +145,7 @@ def project_2():
         ),
         rx.hstack(
             rx.button(
-                rx.text("View Project", size="4", color="#f9fafb", weight="bold"),
+                rx.text("View Project", size="4", color="#FFFCF2", weight="bold"),
                 background_color=color_primary,
                 border_radius="1rem",
                 box_sizing="border-box",
@@ -197,7 +197,7 @@ def project_3():
             rx.badge(
                 rx.text(f"Python", font_size="0.90rem", ),
                 variant="solid",
-                color="#f9fafb",
+                color="#FFFCF2",
                 background_color=color_primary,
                 box_sizing="border-box",
                 border_radius="0.50rem",
@@ -209,7 +209,7 @@ def project_3():
             rx.badge(
                 rx.text(f"Minimalistic", font_size="0.90rem", ),
                 variant="solid",
-                color="#f9fafb",
+                color="#FFFCF2",
                 background_color=color_primary,
                 box_sizing="border-box",
                 border_radius="0.50rem",
@@ -221,7 +221,7 @@ def project_3():
             rx.badge(
                 rx.text(f"Simulation", font_size="0.90rem", ),
                 variant="solid",
-                color="#f9fafb",
+                color="#FFFCF2",
                 background_color=color_primary,
                 box_sizing="border-box",
                 border_radius="0.50rem",
@@ -233,7 +233,7 @@ def project_3():
         ),
         rx.hstack(
             rx.button(
-                rx.text("View Project", size="4", color="#f9fafb", weight="bold"),
+                rx.text("View Project", size="4", color="#FFFCF2", weight="bold"),
                 background_color=color_primary,
                 border_radius="1rem",
                 box_sizing="border-box",

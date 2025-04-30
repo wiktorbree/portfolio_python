@@ -1,5 +1,5 @@
 import reflex as rx
-from portfolio_python.Components.variables import color_primary, color_text, color_text_light, background, color_surface, trans_time, letter_bold, hover_primary, btn_color_secondary, btn_color_secondary_hover
+from portfolio_python.Components.variables import color_primary, color_text, color_text_light, background, color_surface, trans_time, letter_bold, hover_primary, btn_color_secondary
 
 def programming_languages():
     return rx.vstack(

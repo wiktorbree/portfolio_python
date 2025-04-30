@@ -2,7 +2,7 @@ import reflex as rx
 from reflex import toggle_color_mode, mobile_only
 from reflex.components.radix.themes.components.aspect_ratio import aspect_ratio
 from portfolio_python.Components.navbar import navbar
-from portfolio_python.Components.variables import color_primary, color_text, color_text_light, background, color_surface, trans_time, letter_bold, hover_primary, btn_color_secondary, btn_color_secondary_hover
+from portfolio_python.Components.variables import color_primary, color_text, color_text_light, background, color_surface, trans_time, letter_bold, hover_primary, btn_color_secondary
 import portfolio_python.Components.projects_list as pl
 import portfolio_python.Components.skills_list as skl
 
@@ -48,7 +48,7 @@ def main():
                 max_width="600px",
             ),
             rx.button(
-                rx.text("Get in touch", size="4", color="#f9fafb",),
+                rx.text("Get in touch", size="4", color="#FFFCF2", weight="bold"),
                 background_color=color_primary,
                 border_radius="1rem",
                 box_sizing="border-box",
@@ -71,7 +71,7 @@ def main():
 
 def projects():
     return rx.box(
-        rx.heading("Projects", size="8", weight="bold", align="center", padding="0 0 4rem 0", letter_spacing=letter_bold,),
+        rx.heading("Projects", size="8", weight="bold", align="center", padding="0 0 4rem 0", letter_spacing=letter_bold, color=color_text()),
         rx.desktop_only(
             rx.grid(
                 rx.foreach(
@@ -144,7 +144,7 @@ def projects():
 
 def skills():
     return rx.box(
-        rx.heading("Skills", size="8", weight="bold", align="center", padding="4rem 0 4rem 0", letter_spacing=letter_bold, ),
+        rx.heading("Skills", size="8", weight="bold", align="center", padding="4rem 0 4rem 0", letter_spacing=letter_bold, color=color_text()),
         rx.desktop_only(
             rx.grid(
                 rx.foreach(
@@ -232,7 +232,7 @@ def skills():
 
 def get_in_touch():
     return rx.box(
-        rx.heading("Get in Touch", size="8", weight="bold", align="center", padding="4rem 0 4rem 0", letter_spacing=letter_bold, ),
+        rx.heading("Get in Touch", size="8", weight="bold", align="center", padding="4rem 0 4rem 0", letter_spacing=letter_bold, color=color_text()),
         rx.vstack(
             rx.button(
                 rx.icon("mail", color=color_primary, margin="0rem 0.75rem 0rem 0rem",),

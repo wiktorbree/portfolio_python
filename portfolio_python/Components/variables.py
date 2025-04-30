@@ -1,42 +1,36 @@
 import reflex as rx
 
-color_primary = "#2563eb"
-hover_primary = "#2055c9"
+color_primary = "#EB5E28"
+hover_primary = "#cd4f1f"
 trans_time = "0.3s ease"
 letter_bold = "0.7px"
 
 def color_text():
     return rx.color_mode_cond(
-        light="#1f2937",
-        dark="#f9fafb",
+        light="#403D39",
+        dark="#CCC5B9",
     ),
 
 def color_text_light():
     return rx.color_mode_cond(
-        light="#6b7280",
-        dark="#9ca3af",
+        light="#5b5752",
+        dark="#b0aaa0",
     ),
 
 def background():
     return rx.color_mode_cond(
-        light="#ffffff",
-        dark="#111827",
+        light="#FFFCF2",
+        dark="#252422",
     ),
 
 def color_surface():
     return rx.color_mode_cond(
-        light="#f3f4f6",
-        dark="#1f2937",
+        light="#efe7da",
+        dark="#403D39",
     ),
 
 def btn_color_secondary():
     return rx.color_mode_cond(
-        light="#d9dadb",
-        dark="#273445",
-    ),
-
-def btn_color_secondary_hover():
-    return rx.color_mode_cond(
-        light="#c5c7c9",
-        dark="#333f51",
+        light="#d8d1c4",
+        dark="#58534c",
     ),
