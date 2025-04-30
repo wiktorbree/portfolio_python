@@ -6,20 +6,20 @@ def project_1():
     return rx.box(
         rx.image(src=f"/project1.png", width="100%", aspect_ratio="16 / 9", object_fit="cover"),
         rx.heading(
-            f"Habituo",
+            f"Workshop Panel",
             size="6",
             padding="1rem 1.5rem 1rem 1.5rem",
             color=color_text(),
             letter_spacing=letter_bold,
         ),
         rx.text(
-            "Habit tracker with Pomodoro Timer made in Swift using AI.",
+            "Web-based panel made in Reflex for managing automotive services.",
             padding="0 1.5rem 0 1.5rem",
             color=color_text_light(),
         ),
         rx.hstack(
             rx.badge(
-                rx.text(f"Swift", font_size="0.90rem", ),
+                rx.text(f"Python", font_size="0.90rem", ),
                 variant="solid",
                 color="#f9fafb",
                 background_color=color_primary,
@@ -43,7 +43,7 @@ def project_1():
 
             ),
             rx.badge(
-                rx.text(f"Mobile", font_size="0.90rem", ),
+                rx.text(f"Reflex", font_size="0.90rem", ),
                 variant="solid",
                 color="#f9fafb",
                 background_color=color_primary,
@@ -69,6 +69,7 @@ def project_1():
                 _hover={
                     "background_color": f"{hover_primary}"
                 },
+                on_click=rx.redirect("https://github.com/wiktorbree/workshop_management_panel", is_external=True),
             ),
             rx.button(
                 rx.text("Source Code", size="4", color=color_text(), weight="bold"),
@@ -83,7 +84,7 @@ def project_1():
                 _hover={
                     "filter": "brightness(90%)",
                 },
-                on_click=rx.redirect("https://github.com/wiktorbree/", is_external=True),
+                on_click=rx.redirect("https://github.com/wiktorbree/workshop_management_panel", is_external=True),
             ),
             padding="0rem 1.5rem 0rem 1.5rem",
         ),
@@ -156,6 +157,7 @@ def project_2():
                 _hover={
                     "background_color": f"{hover_primary}"
                 },
+                on_click=rx.redirect("https://wiktorbree.itch.io/penguin-invasion", is_external=True),
             ),
             rx.button(
                 rx.text("Source Code", size="4", color=color_text(), weight="bold"),
@@ -243,6 +245,7 @@ def project_3():
                 _hover={
                     "background_color": f"{hover_primary}"
                 },
+                on_click=rx.redirect("https://github.com/wiktorbree/artificial-life-python", is_external=True),
             ),
             rx.button(
                 rx.text("Source Code", size="4", color=color_text(), weight="bold"),

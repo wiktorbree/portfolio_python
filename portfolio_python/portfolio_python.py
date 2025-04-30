@@ -80,7 +80,7 @@ def projects():
                         project,
                         variant="ghost",
                         background_color=color_surface(),
-                        height="45vh",
+                        height="28rem",
                         box_shadow="lg",
                         width="100%",
                         margin="0",
@@ -99,7 +99,7 @@ def projects():
                 width="100%",
             ),
         ),
-        rx.mobile_and_tablet(
+        rx.tablet_only(
             rx.vstack(
                 rx.foreach(
                     project_list,
@@ -107,7 +107,27 @@ def projects():
                         project,
                         variant="ghost",
                         background_color=color_surface(),
-                        height="65vh",
+                        height="31rem",
+                        box_shadow="lg",
+                        width="28rem",
+                        margin="0",
+                        padding="0",
+                        overflow="hidden",
+                        border_radius="25px",
+                    )
+                ),
+                align="center",
+            )
+        ),
+        rx.mobile_only(
+            rx.vstack(
+                rx.foreach(
+                    project_list,
+                    lambda project: rx.card(
+                        project,
+                        variant="ghost",
+                        background_color=color_surface(),
+                        height="55vh",
                         box_shadow="lg",
                         width="100%",
                         margin="0",
@@ -115,7 +135,8 @@ def projects():
                         overflow="hidden",
                         border_radius="25px",
                     )
-                )
+                ),
+                align="center",
             )
         ),
         id="projects",
@@ -133,7 +154,7 @@ def skills():
                         align_items="center",
                         variant="ghost",
                         background_color=color_surface(),
-                        height="40vh",
+                        height="20rem",
                         box_shadow="lg",
                         width="100%",
                         margin="0",
